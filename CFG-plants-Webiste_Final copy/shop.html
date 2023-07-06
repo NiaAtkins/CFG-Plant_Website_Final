@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!-- REMIX ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!--Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+
+    <title>Leaf&Bloom</title>
+</head>
+
+<!-- HEADER -->
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class="ri-leaf-line nav__logo-icon"></i> Leaf&<br>Bloom
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about.html" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="shop.html" class="nav__link">Shop</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="plantcare.html" class="nav__link">Plant Care</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link">Contact Us</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <!-- BASKET -->
+
+            <button class="button" id="openBasketBtn" onclick="openBasket()"><i
+                    class="ri-shopping-basket-line"></i></button>
+
+            <div id="basketPopup" class="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="closeBasket()">&times;</span>
+                    <h2>Basket</h2>
+                    <ul id="basketItems"></ul>
+                    <p id="totalPrice">Total Price: £0.00</p>
+                    <button class="button" onclick="checkout()">Checkout</button>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+
+
+
+
+
+
+    </header>
+
+    <!-- HERO IMAGE -->
+
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1 class="title">Plants</h1>
+
+        </div>
+    </div>
+
+
+
+
+
+    <!--PRODUCTS -->
+    <section class="product section container" id="products">
+        <h2 class="section__title-center">
+            Check out our <br> products
+        </h2>
+
+        <div class="product__container grid">
+            <article class="product__card">
+                <div class="product__circle"></div>
+
+                <img src="default_name.jpg.jpeg" alt="" class="product__img">
+
+                <h3 class="product__title">Aloe Plant</h3>
+                <span class="product__price">£12.99</span>
+
+                <button class="button" onclick="addItem('Aloe Plant', 12.99)" ondblclick="showAlert()">Add to
+                    Cart</button>
+            </article>
+
+            <article class="product__card">
+                <div class="product__circle"></div>
+
+                <img src="default_name.jpg 3.jpeg" alt="" class="product__img">
+
+                <h3 class="product__title">Cacti Plant</h3>
+                <span class="product__price">£16.99</span>
+
+                <button class="button" onclick="addItem('Cacti Plant', 16.99)">Add to Cart</button>
+            </article>
+
+            <article class="product__card">
+                <div class="product__circle"></div>
+
+                <img src="default_name.jpg 4.jpeg" alt="" class="product__img">
+
+                <h3 class="product__title">Fern Plant</h3>
+                <span class="product__price">£14.99</span>
+
+                <button class="button" onclick="addItem('Fern Plant', 14.99)">Add to Cart</button>
+
+            </article>
+
+            <article class="product__card">
+                <div class="product__circle"></div>
+
+                <img src="default_name.jpg 5.jpeg" alt="" class="product__img">
+
+                <h3 class="product__title">Ivy Plant</h3>
+                <span class="product__price">£9.99</span>
+
+                <button class="button" onclick="addItem('Ivy Plant', 9.99)">Add to Cart</button>
+            </article>
+
+            <article class="product__card">
+                <div class="product__circle"></div>
+
+                <img src="default_name.jpg 6.jpeg" alt="" class="product__img">
+
+                <h3 class="product__title">Snake Plant</h3>
+                <span class="product__price">£14.99</span>
+
+                <button class="button" onclick="addItem('Snake Plant', 14.99)">Add to Cart</button>
+            </article>
+
+            <article class="product__card">
+                <div class="product__circle"></div>
+
+                <img src="default_name.jpg 7.jpeg" alt="" class="product__img">
+
+                <h3 class="product__title">Philodendron Plant</h3>
+                <span class="product__price">£14.99</span>
+
+                <button class="button" onclick="addItem('Philodendron Plant', 14.99)">Add to Cart</button>
+            </article>
+
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">
+                    <i class="ri-leaf-line footer__logo-icon"></i> Leaf&Bloom
+                </a>
+
+                <h3 class="footer__title">
+                    Subscribe to our newsletter <br> to recieve updates
+                </h3>
+
+                <div class="footer__subscribe">
+                    <input type="email" placeholder="Enter your email" class="footer__input">
+
+                    <button class="button button--flex footer__button">
+                        Subscribe
+
+                    </button>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Our Address</h3>
+
+                <ul class="footer__data">
+                    <li class="footer__information">3 Newland St</li>
+                    <li class="footer__information">Witham, Essex</li>
+                    <li class="footer__information">CM8 2AF, UK</li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Contact Us</h3>
+
+                <ul class="footer__data">
+                    <li class="footer__information">+1376503196</li>
+
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com/" class="footer__social-link">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" class="footer__social-link">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://twitter.com/" class="footer__social-link">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                    </div>
+                </ul>
+            </div>
+
+            <p class="footer__copy">&#169; Leaf&Bloom. All rigths reserved</p>
+    </footer>
+
+    <!-- SCROLL UP -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-fill scrollup__icon"></i>
+    </a>
+
+    
+
+    <!-- MAIN JS -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

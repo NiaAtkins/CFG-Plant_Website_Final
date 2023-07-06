@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!-- REMIX ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+
+    <!--CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <title>Leaf&Bloom</title>
+</head>
+
+<!-- HEADER -->
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class="ri-leaf-line nav__logo-icon"></i> Leaf&<br>Bloom
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="inde" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about.html" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="shop.html" class="nav__link">Shop</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="plantcare.html" class="nav__link">Plant Care</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link">Contact Us</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <!-- BASKET -->
+
+            <button class="button" id="openBasketBtn" onclick="openBasket()"><i class="ri-shopping-basket-line"></i></button>
+
+            <div id="basketPopup" class="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="closeBasket()">&times;</span>
+                    <h2>Basket</h2>
+                    <ul id="basketItems"></ul>
+                    <p id="totalPrice">Total Price: £0.00</p>
+                    <button class="button" onclick="checkout()">Checkout</button>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </header>
+</body>
+<div class="hero-image">
+    <div class="hero-text">
+        <h1 class="title">Plant Care</h1>
+
+    </div>
+</div>
+
+<!-- Q&A -->
+
+<section class="questions section" id="faqs">
+    <h2 class="section__title-center questions__title container">
+        Commonly asked questions to<br> help you care for your plants!
+    </h2>
+
+    <div class="questions__container container grid">
+        <div class="questions__group">
+            <div class="questions__item">
+                <header class="questions__header">
+                    <i class="ri-add-line questions__icon"></i>
+                    <h3 class="questions__item-title">
+                        How often should I water my indoor plants?
+                    </h3>
+                </header>
+
+                <div class="questions__content">
+                    <p class="questions__description">
+                        The watering frequency varies depending on factors like the plant species,
+                         pot size, humidity levels, and environmental conditions. As a general guideline, 
+                         it's best to water your indoor plants when the top inch of soil feels dry.
+                          Avoid overwatering, as it can lead to root rot, while underwatering can 
+                          cause stress and dehydration for the plants.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="questions__item">
+                <header class="questions__header">
+                    <i class="ri-add-line questions__icon"></i>
+                    <h3 class="questions__item-title">
+                        What is the best lighting conditions for indoor plants?
+                    </h3>
+                </header>
+
+                <div class="questions__content">
+                    <p class="questions__description">
+                        Most indoor plants thrive in bright, indirect light. Place
+                         them near windows or areas where they can receive filtered sunlight.
+                          However, it's essential to understand the light requirements of specific plants,
+                           as some may prefer low light conditions or thrive under direct sunlight. 
+                           Adjust the placement of your plants accordingly to provide 
+                           them with the optimal lighting conditions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="questions__item">
+                <header class="questions__header">
+                    <i class="ri-add-line questions__icon"></i>
+                    <h3 class="questions__item-title">
+                        What causes brown crispy leaves?
+                    </h3>
+                </header>
+
+                <div class="questions__content">
+                    <p class="questions__description">
+                        Plants are easy way to add color energy and transform your
+                        space but which planet is for you. Choosing the right plant.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="questions__group">
+            <div class="questions__item">
+                <header class="questions__header">
+                    <i class="ri-add-line questions__icon"></i>
+                    <h3 class="questions__item-title">
+                        How do I prevent pests from infesting my indoor plants?
+                    </h3>
+                </header>
+
+                <div class="questions__content">
+                    <p class="questions__description">
+                        Regularly inspect your plants for signs of pests such as aphids, 
+                        spider mites, or mealybugs. Keep a close eye on the undersides 
+                        of leaves and along stems. To prevent and control pests, you can gently
+                         wipe leaves with a damp cloth, use natural insecticidal soap or neem oil 
+                         sprays, or introduce beneficial insects like ladybugs. Maintaining good 
+                         plant hygiene, providing adequate airflow, and avoiding overwatering can 
+                         also help prevent pest infestations.
+                    </p>
+                </div>
+            </div>
+
+            <div class="questions__item">
+                <header class="questions__header">
+                    <i class="ri-add-line questions__icon"></i>
+                    <h3 class="questions__item-title">
+                        How do I know if my indoor plant needs to be repotted?
+                    </h3>
+                </header>
+
+                <div class="questions__content">
+                    <p class="questions__description">
+                        Signs that a plant needs repotting include roots coming 
+                        out of the drainage holes, slow growth, or the soil drying 
+                        out too quickly after watering. Gently lift the plant out 
+                        of its pot to check the root system. If the roots are tightly
+                         packed and circling around the pot, it's time to repot the 
+                         plant into a slightly larger container with fresh, well-draining soil.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="questions__item">
+                <header class="questions__header">
+                    <i class="ri-add-line questions__icon"></i>
+                    <h3 class="questions__item-title">
+                        Can I use tap water for watering my indoor plants?
+                    </h3>
+                </header>
+
+                <div class="questions__content">
+                    <p class="questions__description">
+                        Tap water can be used for most indoor plants, 
+                        but it's important to consider the quality of your water.
+                         Some tap water contains chemicals like chlorine or excessive 
+                         mineral content that can be harmful to plants. If you notice 
+                         issues like leaf browning or mineral deposits on the soil surface,
+                          consider using filtered or distilled water, or let tap water sit 
+                          overnight to allow the chlorine to dissipate before using it for watering.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--FOOTER -->
+
+<footer class="footer section">
+    <div class="footer__container container grid">
+        <div class="footer__content">
+            <a href="#" class="footer__logo">
+                <i class="ri-leaf-line footer__logo-icon"></i> Leaf&Bloom
+            </a>
+
+            <h3 class="footer__title">
+                Subscribe to our newsletter <br> to recieve updates
+            </h3>
+
+            <div class="footer__subscribe">
+                <input type="email" placeholder="Enter your email" class="footer__input">
+
+                <button class="button button--flex footer__button">
+                    Subscribe
+                    
+                </button>
+            </div>
+        </div>
+
+        <div class="footer__content">
+            <h3 class="footer__title">Our Address</h3>
+
+            <ul class="footer__data">
+                <li class="footer__information">3 Newland St</li>
+                <li class="footer__information">Witham, Essex</li>
+                <li class="footer__information">CM8 2AF, UK</li>
+            </ul>
+        </div>
+
+        <div class="footer__content">
+            <h3 class="footer__title">Contact Us</h3>
+
+            <ul class="footer__data">
+                <li class="footer__information">+1376503196</li>
+
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/" class="footer__social-link">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="footer__social-link">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="https://twitter.com/" class="footer__social-link">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                </div>
+            </ul>
+        </div>
+        
+        <p class="footer__copy">&#169; Leaf&Bloom. All rigths reserved</p>
+</footer>
+
+<!-- SCROLL UP -->
+<a href="#" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-fill scrollup__icon"></i>
+</a>
+
+
+
+<!-- MAIN JS -->
+<script src="assets/js/main.js"></script>
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+    crossorigin="anonymous"></script>
+</body>
+
+
+</html>
